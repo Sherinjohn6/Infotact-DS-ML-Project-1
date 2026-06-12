@@ -39,5 +39,12 @@ df.to_csv("project1_feature_engineered.csv", index=False)
 print("\nNew features added successfully!")
 print("\nUpdated Dataset:")
 print(df.head())
-
 print("\nSaved as: project1_feature_engineered.csv")
+    #Load the Feature-Engineered Dataset
+import pandas as pd
+
+df = pd.read_csv("project1_feature_engineered.csv")
+print(df.head())    
+      #Define Features and Target
+X = df.drop(['Machine failure', 'UDI', 'Product ID'], axis=1)
+y = df['Machine failure']      
