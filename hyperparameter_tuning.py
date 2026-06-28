@@ -126,3 +126,7 @@ print("F1 Score :", f1_score(y_test, y_pred))
 
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+import joblib
+
+joblib.dump(best_model, "lightgbm_tuned_model.pkl")
+print("Model saved successfully!")

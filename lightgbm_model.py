@@ -48,3 +48,22 @@ print(confusion_matrix(y_test, y_pred))
 # Classification Report
 print("\nClassification Report:")
 print(classification_report(y_test, y_pred))
+from lightgbm import LGBMClassifier
+
+# Train model
+model = LGBMClassifier(random_state=42)
+model.fit(X_train, y_train)
+
+# Predictions
+y_pred = model.predict(X_test)
+
+# Save model and data
+import joblib
+
+joblib.dump(model, "lightgbm_model.pkl")
+joblib.dump(X_train, "X_train.pkl")
+joblib.dump(X_test, "X_test.pkl")
+joblib.dump(y_train, "y_train.pkl")
+joblib.dump(y_test, "y_test.pkl")
+
+print("All files saved successfully.")

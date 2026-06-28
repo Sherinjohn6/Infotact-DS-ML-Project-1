@@ -34,16 +34,16 @@ df['High_Wear'] = (df['Tool wear [min]'] > 150).astype(int)
 df['High_Temp'] = (df['Process temperature [K]'] > 310).astype(int)
 
 # Save the updated dataset
-df.to_csv("project1_feature_engineered.csv", index=False)
+df.to_csv("project1_feature_engineering.csv", index=False)
 
 print("\nNew features added successfully!")
 print("\nUpdated Dataset:")
 print(df.head())
-print("\nSaved as: project1_feature_engineered.csv")
+print("\nSaved as: project1_feature_engineering.csv")
     #Load the Feature-Engineered Dataset
 import pandas as pd
 
-df = pd.read_csv("project1_feature_engineered.csv")
+df = pd.read_csv("project1_feature_engineering.csv")
 print(df.head())    
       #Define Features and Target
 X = df.drop(['Machine failure', 'UDI', 'Product ID'], axis=1)
