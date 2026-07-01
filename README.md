@@ -43,10 +43,10 @@ Data Preprocessing
 Feature Engineering
     │
     ▼
-SMOTE (Class Balancing)
+Train-Test Split
     │
     ▼
-Train-Test Split
+SMOTE (Class Balancing)
     │
     ▼
 Random Forest & LightGBM
